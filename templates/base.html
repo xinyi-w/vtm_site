@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock%}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
+
 <body>
     <div>
         <header>
@@ -13,20 +15,22 @@
         </header>
         <main>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="estimate.html">Estimate</a>
-                
+                <a href="/">Home</a>
+                <a href="about">About</a>
+                <a href="estimate">Estimate</a>
+
             </nav>
         </main>
-        <h2>Welcome to Software Design</h2>
-        
-        <hr>
-        <br>
-        
+
         {% block body %}
+        
 
         {% endblock %}
+        <footer>
+            <h4>&#169;VTM 2020</h4>
+        </footer>
 
     </div>
 </body>
+
 </html>

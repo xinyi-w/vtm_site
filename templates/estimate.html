@@ -3,8 +3,30 @@
 {% block title %} Estimate {% endblock %}
 
 
+
 {% block body %} 
 
 <h2>Estimate Calculator </h2>
+<hr>
+<br>
+<form action="/add" method="POST">
+    <label for="radius">
+        Radius(inches):
+        <input type="text" id="radius" name="radius" required autofocus />
+    </label>
+<br><br>
+    <label for="height">
+        Height(inches):
+        <input type="text" id="height" name="height" required  />
+    </label>
+<br><br>
+    <input type="submit" value="Add">
+
+
+</form>
+{% if estimate %}
+<p>The total cost estimate is: ${{ estimate }}</p>
+{% endif %}
+
 
 {% endblock %}
